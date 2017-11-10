@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="govXmlNameSpace">
+
+	<update id="saveAttr" parameterType="HashMap">
+		update user_tbl set attr = #{attr} where id = #{user_id}
+	</update>
+	
+	<select id="getAttr" parameterType="String" resultType="String">
+		select attr from user_tbl where id = #{user_id} 
+	</select>
+	
+	<insert id="saveGovData" parameterType="com.kosmo.career.vo.GovVO">
+		insert into gov_tbl values
+		(gov_seq.nextval, #{userName}, #{gainDate}, #{lossDate}, #{classify}, #{workspaceName}, #{workspaceLocation})
+	</insert>
+	
+</mapper>

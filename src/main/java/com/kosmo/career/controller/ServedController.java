@@ -132,6 +132,12 @@ public class ServedController {
 	@RequestMapping(value="/inputCom.do")
 	public String inputCom(HttpServletRequest request, 
 			HttpServletResponse response) {
+		return "userMain_comMng/userComReg1";
+	}
+	
+	@RequestMapping(value="/comDirectUserReg.do")
+	public String comDirectUserReg(HttpServletRequest request, 
+			HttpServletResponse response) {
 		return "userMain_comMng/userComReg";
 	}
 	
